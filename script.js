@@ -11,12 +11,12 @@ function hamburgerClick(args) {
     }
 }
 function menuExpand() {
-    $(".menuPhone").fadeIn();
+    $(".menuPhone").slideDown();
 }
 function menuCollapse() {
 
     console.log("collapse");
-    $(".menuPhone").fadeOut();
+    $(".menuPhone").slideUp();
 }
 $(document).ready(function () {
   $(".menuPhone").hide();
