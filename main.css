@@ -1,7 +1,7 @@
-.navi{
-    float: right;
-    text-align: center;
-    padding-right: 15px;
-    background-color: slategray;
+*{
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    color: whitesmoke;
+    margin: 0;
+    padding: 0;
 }
-

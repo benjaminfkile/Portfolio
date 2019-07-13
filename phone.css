@@ -1,0 +1,73 @@
+/*smartphone portrait*/
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 812px) 
+and (orientation: portrait) {
+
+    .naviPhone{
+    display: flex;
+    height: 140px;
+    }
+    .hamburger{
+        flex: 1;
+        cursor: pointer;
+    }
+    .hamburger {
+        margin-top: 40px;
+        margin-right: 40px;
+    }
+    .header{
+        font-size: 25px;
+        margin-top: 35px;
+        margin-left: 15px;
+        margin-right: 70%
+    }
+    .bar1, .bar2, .bar3 {
+        width: 50px;
+        height: 5px;
+        background-color: white;
+        margin: 10px 0;
+        transition: 0.4s;
+    }
+      
+      /* Rotate first bar */
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 10px) ;
+        transform: rotate(-45deg) translate(-9px, 10px) ;
+    }
+      
+      /* Fade out the second bar */
+    .change .bar2 {
+        opacity: 0;
+    }
+      
+      /* Rotate last bar */
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px) ;
+        transform: rotate(45deg) translate(-8px, -8px) ;
+    }
+
+    .menuPhone{
+        width: 180px;
+        float: right;
+        text-align: center;
+    }
+    .menuPhone li{
+        list-style: none;
+        font-size: 35px;
+        margin: 20px;
+    }
+    .menuPhone a{
+        text-decoration: none;
+    }
+
+}
+/*smart phone landscape*/
+@media only screen 
+and (min-device-width: 320px) 
+and (max-device-width: 823px) 
+and (orientation: landscape) {
+    *{
+        background-color: green;
+    }
+}
