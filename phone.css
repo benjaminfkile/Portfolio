@@ -3,11 +3,14 @@
 and (min-device-width: 320px) 
 and (max-device-width: 812px) 
 and (orientation: portrait) {
-
+    
     .naviPhone{
-    display: flex;
-    height: 140px;
-    margin-top: 10%;
+        opacity: 1.0;
+        display: flex;
+        height: 140px;
+        margin-top: 40px;
+        margin-left: 10px;
+        margin-right: 10px;
     }
     .hamburger{
         flex: 1;
@@ -15,13 +18,13 @@ and (orientation: portrait) {
     }
     .hamburger {
         margin-top: 40px;
-        margin-right: 40px;
+        margin-left: 660px;
     }
     .header{
         font-size: 25px;
         margin-top: 35px;
-        margin-left: 95px;
-        margin-right: 515px;
+        margin-left: 20px;
+        float: left;
     }
     .bar1, .bar2, .bar3 {
         width: 70px;
@@ -30,38 +33,56 @@ and (orientation: portrait) {
         margin: 14px 0;
         transition: 0.4s;
     }
-
-  
-    
-      /* Rotate first bar */
     .change .bar1 {
         transform: rotate(-45deg) translate(-10px, 10px) ;
-        background-color: red;
     }
-      
-      /* Fade out the second bar */
     .change .bar2 {
         opacity: 0;
     }
       
-      /* Rotate last bar */
     .change .bar3 {
         transform: rotate(45deg) translate(-15px, -15px) ;
-        background-color: red;
     }
     .menuPhone{
-        width: 180px;
+
+        opacity: 1.0;
+        width: 250px;
         float: right;
+        text-align: right;
+        margin-right: 10px
         
     }
     .menuPhone li{
         list-style: none;
         font-size: 35px;
-        margin-top: 20px;
-        margin-right: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 60px;
     }
     .menuPhone a{
         text-decoration: none;
+    }
+    .bio{
+        height: 600px;
+        margin-top: 250px;
+        margin-right: 45px;
+        margin-left: 45px;
+    }
+    .bio h2{
+
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        font-size: 40px;
+    }
+    .bio li{
+        list-style: none;
+        text-align: center;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 20px;
+        margin-right: 20px;
+        font-size: 30px;
     }
 
 }
