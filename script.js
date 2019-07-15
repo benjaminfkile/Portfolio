@@ -5,11 +5,11 @@ function hamburgerClick(args) {
     if (menuChecked % 2 !== 0) {
         console.log("checked");
         menuExpand();
-        $(".bio").hide();      
+        $(".bio").fadeOut();      
     } else {
         console.log("unchecked");
         menuCollapse();
-        $(".bio").show();
+        $(".bio").fadeIn();
     }
 }
 function menuExpand() {

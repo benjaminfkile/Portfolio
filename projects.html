@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bens Projects</title>
+    <meta name="Projects" content="My Projects">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="tablet.css">
+    <link rel="stylesheet" href="large.css">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="list.js"></script>
+
+</head>
+
+<body>
+
+    <div class="projectsHeader">
+        <h1>
+            header
+        </h1>
+    </div>
+
+    <div class="projectsDescription">
+        <h2>
+            description
+        </h2>
+    </div>
+    <div class="images">
+
+
+    </div>
+
+    <script>
+
+        var imgIndex = -1;
+
+       
+        setInterval(carousel, 2000);
+        function carousel() {
+            imgIndex++;
+            if (imgIndex < projectsArray[0].images.length) {
+                loadImage(projectsArray[0].images[imgIndex]);
+                console.log(projectsArray[0].images[imgIndex]);
+            } else {
+                imgIndex = -1;
+            }
+
+        }
+
+        function loadImage(args) {
+            $(".images").empty();
+            $(".images").append(
+                "<img src="
+                + "\""
+                + args
+                + "\""
+                + "alt=\"alt\">"
+            );
+
+        }
+
+    </script>
+
+</body>
