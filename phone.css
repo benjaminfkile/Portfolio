@@ -149,7 +149,26 @@ and (orientation: portrait) {
 and (min-device-width: 320px) 
 and (max-device-width: 823px) 
 and (orientation: landscape) {
-    *{
-        background-color: green;
+*{
+    display: flex;
+}
+    .images{
+        order: 1;
+        margin-left: -985px;
     }
+    .projectsHeader{
+        order: 2;
+    }
+    .projectsDescription{
+        order: 3;
+    }
+    .pNavi{
+        order: 4;
+    }
+    .links{
+        order: 5;
+    }
+
+
+
 }
