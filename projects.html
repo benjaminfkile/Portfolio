@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Bens Projects</title>
+    <title>My Projects</title>
     <meta name="Projects" content="My Projects">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
@@ -19,37 +19,53 @@
 
     <div class="projectsHeader">
         <h1>
-            header
         </h1>
     </div>
 
     <div class="projectsDescription">
         <h2>
-            description
         </h2>
+        <p>
+        </p>
     </div>
     <div class="images">
 
-
+    </div>
+    <div class="pNavi">
+        <div class="left" onclick="lBtnClick(this)">
+            &lt;
+        </div>
+        <div class="right" onclick="rBtnClick(this)">
+            >
+        </div>
+    </div>
+    <div class="links">
+        <div class="repoLink">
+        </div>
+        <div class="liveLink">
+        </div>
     </div>
 
-    <script>
 
+    <script>
+        var projectIndex = 0;
         var imgIndex = -1;
 
-       
+        carousel();
+
+        loadText();
+
         setInterval(carousel, 2000);
+
         function carousel() {
             imgIndex++;
-            if (imgIndex < projectsArray[0].images.length) {
-                loadImage(projectsArray[0].images[imgIndex]);
-                console.log(projectsArray[0].images[imgIndex]);
+            if (imgIndex < projectsArray[projectIndex].images.length) {
+                loadImage(projectsArray[projectIndex].images[imgIndex]);
             } else {
                 imgIndex = -1;
             }
 
         }
-
         function loadImage(args) {
             $(".images").empty();
             $(".images").append(
@@ -61,7 +77,28 @@
             );
 
         }
+        function loadText() {
+            $("h1").html(projectsArray[projectIndex].name);
+            $("h2").html(projectsArray[projectIndex].description);
+            $("p").html("Built in: " + projectsArray[projectIndex].technology);
+            $(".repoLink").html(projectsArray[projectIndex].repoLink);
+            $(".liveLink").html(projectsArray[projectIndex].liveLink);
 
+        }
+        function rBtnClick() {
+            if (projectIndex < projectsArray.length - 1) {
+                projectIndex++;
+                loadText();
+                carousel();
+            }
+        }
+        function lBtnClick() {
+            if (projectIndex > 0) {
+                projectIndex--;
+                loadText();
+                carousel();
+            }
+        }
     </script>
 
 </body>
