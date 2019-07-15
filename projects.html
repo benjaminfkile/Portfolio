@@ -11,31 +11,29 @@
     <link rel="stylesheet" href="tablet.css">
     <link rel="stylesheet" href="large.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-    <script src="list.js"></script>
-
 </head>
 
 <body>
-
     <div class="projectsHeader">
         <h1>
+            empty heading
         </h1>
     </div>
 
     <div class="projectsDescription">
         <h2>
+            empty heading
         </h2>
         <p>
         </p>
     </div>
     <div class="images">
-
     </div>
     <div class="pNavi">
-        <div class="left" onclick="lBtnClick(this)">
+        <div class="left" onclick="leftBtn(this)">
             &lt;
         </div>
-        <div class="right" onclick="rBtnClick(this)">
+        <div class="right" onclick="rightBtn(this)">
             >
         </div>
     </div>
@@ -45,16 +43,47 @@
         <div class="liveLink">
         </div>
     </div>
+    <script>
 
+        var projectsArray = [
+            {
+                name: "Space Quiz:",
+                description: "Space Quiz is an interactive web app that quizzes you on what you know about space.",
+                technology: "HTML, CSS, Javascript, jQuery",
+                repoLink: "<a href=\"https:\/\/github.com\/benjaminfkile\/SpaceQuiz\">Github<\/a>",
+                liveLink: "<a href=\"https:\/\/benjaminfkile.github.io\/SpaceQuiz\/\">Live Page<\/a>",
+                images:
+                    [
+                        "projectsRes/spaceQuiz/sQ1.png",
+                        "projectsRes/spaceQuiz/sQ2.png",
+                        "projectsRes/spaceQuiz/sQ3.png",
+                        "projectsRes/spaceQuiz/sQ4.png",
+                        "projectsRes/spaceQuiz/sQ5.png",
+                        "projectsRes/spaceQuiz/sQ6.png",
+                    ]
+            },
+            {
+                name: "Keno Simulator:",
+                description: "Simulate up to to 2 billion Keno Games and keep track of which numbers are drawn the most.",
+                technology: "Java, Swing(Java)",
+                repoLink: "<a href=\https:\/\/github.com\/benjaminfkile\/spaghetti>Github<\/a>",
+                liveLink: "<a href=\https:\/\/github.com\/benjaminfkile\/spaghetti>Github<\/a>",
+                images:
+                    [
+                        "projectsRes/kenoSimulator/kS1.png",
+                        "projectsRes/kenoSimulator/kS2.png",
+                        "projectsRes/kenoSimulator/kS3.png",
+                        "projectsRes/kenoSimulator/kS4.png",
+                    ]
+            }
+        ];
+    </script>
 
     <script>
         var projectIndex = 0;
         var imgIndex = -1;
-
         carousel();
-
         loadText();
-
         setInterval(carousel, 2000);
 
         function carousel() {
@@ -64,7 +93,6 @@
             } else {
                 imgIndex = -1;
             }
-
         }
         function loadImage(args) {
             $(".images").empty();
@@ -75,7 +103,6 @@
                 + "\""
                 + "alt=\"alt\">"
             );
-
         }
         function loadText() {
             $("h1").html(projectsArray[projectIndex].name);
@@ -85,14 +112,14 @@
             $(".liveLink").html(projectsArray[projectIndex].liveLink);
 
         }
-        function rBtnClick() {
+        function rightBtn() {
             if (projectIndex < projectsArray.length - 1) {
                 projectIndex++;
                 loadText();
                 carousel();
             }
         }
-        function lBtnClick() {
+        function leftBtn() {
             if (projectIndex > 0) {
                 projectIndex--;
                 loadText();
@@ -100,5 +127,4 @@
             }
         }
     </script>
-
 </body>
