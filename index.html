@@ -39,7 +39,10 @@
                 <a href="https://github.com/benjaminfkile">Github</a>
             </li>
             <li>
-                <a href="linkedIn.html">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/benjamin-kile-901092182/">LinkedIn</a>
+            </li>
+            <li>
+                <A HREF="mailto:benjaminfkile@gmail.com">Email Me</A>
             </li>
         </ul>
 
@@ -50,8 +53,9 @@
         </h2>
         <ul>
             <li>
-                I am a car fanatic and in my free time can be found building hot rods.
-
+                I am a car fanatic and in my free time can be found building hot rods. My passion for web development
+                and learning new ways to solve problems keeps me busy and contented, you can usually find me behind the
+                computer listening to music and working on coding problems.
             </li>
         </ul>
 
@@ -82,29 +86,29 @@
 
     <script>
         function hamburgerClick(args) {
-    args.classList.toggle("change");
-    menuChecked++;
-    if (menuChecked % 2 !== 0) {
-        console.log("checked");
-        menuExpand();
-        $(".bio").fadeOut();      
-    } else {
-        console.log("unchecked");
-        menuCollapse();
-        $(".bio").fadeIn();
-    }
-}
-function menuExpand() {
-    $(".menuPhone").slideDown();
-}
-function menuCollapse() {
-    console.log("collapse");
-    $(".menuPhone").slideUp();
-}
-$(document).ready(function () {
-  $(".menuPhone").hide();
-});
-var menuChecked = 0;
+            args.classList.toggle("change");
+            menuChecked++;
+            if (menuChecked % 2 !== 0) {
+                console.log("checked");
+                menuExpand();
+                $(".bio").fadeOut();
+            } else {
+                console.log("unchecked");
+                menuCollapse();
+                $(".bio").fadeIn();
+            }
+        }
+        function menuExpand() {
+            $(".menuPhone").slideDown();
+        }
+        function menuCollapse() {
+            console.log("collapse");
+            $(".menuPhone").slideUp();
+        }
+        $(document).ready(function () {
+            $(".menuPhone").hide();
+        });
+        var menuChecked = 0;
     </script>
 
 </body>

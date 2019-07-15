@@ -67,7 +67,7 @@
                 description: "Simulate up to to 2 billion Keno Games and keep track of which numbers are drawn the most.",
                 technology: "Java, Swing(Java)",
                 repoLink: "<a href=\https:\/\/github.com\/benjaminfkile\/spaghetti>Github<\/a>",
-                liveLink: "<a href=\https:\/\/github.com\/benjaminfkile\/spaghetti>Github<\/a>",
+                liveLink: "<a href=https:\/\/www.dropbox.com\/s\/p8d4gzjytwvvob9\/KenoSimulator.jar?dl=0>Download<\/a>",
                 images:
                     [
                         "./projectsRes/kenoSimulator/kS1.PNG",
@@ -84,7 +84,7 @@
         var imgIndex = -1;
         carousel();
         loadText();
-        setInterval(carousel, 2000);
+        setInterval(carousel, 3000);
 
         function carousel() {
             imgIndex++;
@@ -114,13 +114,17 @@
         }
         function rightBtn() {
             if (projectIndex < projectsArray.length - 1) {
+                imgIndex = -1;
                 projectIndex++;
+                $(".images").empty();
                 loadText();
                 carousel();
             }
         }
         function leftBtn() {
+            $(".images").empty();
             if (projectIndex > 0) {
+                imgIndex = -1;
                 projectIndex--;
                 loadText();
                 carousel();
