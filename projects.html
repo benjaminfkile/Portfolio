@@ -44,8 +44,8 @@
         <div class="liveLink">
         </div>
     </div>
-
     <script>
+        
         var projectIndex = 0;
         var imgIndex = -1;
         carousel();
@@ -71,6 +71,16 @@
             );
         }
         function loadText() {
+            if(projectIndex === 0){
+                $(".left").css("color" , "gray");
+                $(".right").css("color" , "silver");
+
+            }
+            if(projectIndex === projectsArray.length-1){
+                $(".left").css("color" , "silver");
+                $(".right").css("color" , "gray");
+
+            }
             $("h1").html(projectsArray[projectIndex].name);
             $("h2").html(projectsArray[projectIndex].description);
             $("p").html("Built in: " + projectsArray[projectIndex].technology);
@@ -88,8 +98,8 @@
             }
         }
         function leftBtn() {
-            $(".images").empty();
             if (projectIndex > 0) {
+                $(".images").empty();
                 imgIndex = -1;
                 projectIndex--;
                 loadText();

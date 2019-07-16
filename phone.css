@@ -87,7 +87,7 @@ and (orientation: portrait) {
     /*******************************projects.html************************/
     .projectsHeader h1{
         text-align: center;
-        margin-top: 50px;
+        margin-top: 15px;
         font-size: 40px;
     }
     .projectsDescription h2{
@@ -149,26 +149,87 @@ and (orientation: portrait) {
 and (min-device-width: 320px) 
 and (max-device-width: 823px) 
 and (orientation: landscape) {
-*{
-    display: flex;
-}
-    .images{
-        order: 1;
-        margin-left: -985px;
+
+    script{
+        display: none;
     }
-    .projectsHeader{
+    title{
+        display: none;
+    }
+    body{
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+    body .projectsHeader:nth-of-type(1){
         order: 2;
     }
-    .projectsDescription{
+    body .projectsDescription:nth-of-type(2){
         order: 3;
     }
-    .pNavi{
-        order: 4;
+    body .images:nth-of-type(3){
+        order: 1;
     }
-    .links{
+    body .pNavi:nth-of-type(4){
         order: 5;
     }
+    body .links:nth-of-type(5){
+        order: 4;
+    }
+
+    .projectsHeader{
+
+        position: absolute;
+           font-size: 15px;
+           margin-left: 350px;
+           margin-right: 100px;
+           margin-top: 10px;       
+           
+
+    }
+    .projectsDescription{
+        width: 250px;
+        margin-right: 350px;
+        margin-left: 35px;
+        margin-top: 90px;
+        margin-bottom: 0px;
+        font-size: 13px;
+    }
+  
+    .pNavi{
+        display: flex;
+        margin-left: -50px;
+        margin-right: 60px;
+        margin-top: 440px;
+        margin-bottom: 0px;
+        font-size: 70px;
+    }
+    .left{
+        margin-right: 60px;
+        margin-left: -70px;
+    }
+    .links{
+        display: flex;
+        margin-left: -360px;
+        margin-right: 0px;
+        margin-top: 495px;
+        margin-bottom: 0px;
+        font-size: 20px;
+    }
+    .repoLink{
+        margin-left: -235px;
+        margin-right: 50px;
+        margin-top: 0px;
+    }
+    .liveLink{
+        margin-left: 0px;
+        margin-right: -90px;
+        margin-top: 0px;
+    }
 
 
+
+     
+
+     
 
 }
