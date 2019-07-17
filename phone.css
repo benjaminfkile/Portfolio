@@ -156,25 +156,111 @@ and (orientation: landscape) {
     title{
         display: none;
     }
-    body{
+
+    .naviPhone{
+        opacity: 1.0;
+        display: flex;
+        height: 0px;
+        margin-top: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .hamburger{
+        flex: 1;
+        cursor: pointer;
+    }
+    .hamburger {
+        margin-top: 10px;
+        margin-left: 735px;
+    }
+    .header{
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 4px;
+        float: left;
+    }
+    .bar1, .bar2, .bar3 {
+        width: 50px;
+        height: 5px;
+        background-color: white;
+        margin: 10px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        transform: rotate(-45deg) translate(-8px, 8px) ;
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+      
+    .change .bar3 {
+        transform: rotate(45deg) translate(-10px, -10px) ;
+    }
+    .menuPhone{
+
+        opacity: 1.0;
+        width: 250px;
+        float: right;
+        text-align: right;
+        margin-top: 70px;
+        margin-right: 15px
+        
+    }
+    .menuPhone li{
+        list-style: none;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin-left: 60px;
+    }
+    .menuPhone a{
+        text-decoration: none;
+    }
+    .bio{
+        height: 600px;
+        margin-top: 90px;
+        margin-right: 45px;
+        margin-left: 15px;
+    }
+    .bio h2{
+
+        text-align: left;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        font-size: 25px;
+    }
+    .bio li{
+        list-style: none;
+        text-align: left;
+        margin-top: 7px;
+        margin-bottom: 7px;
+        margin-left: 0px;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+
+    
+    .projectsParent{
         display: grid;
         grid-template-columns: repeat(5, 1fr);
     }
-    body .projectsHeader:nth-of-type(1){
+    
+    .projectsParent .projectsHeader:nth-of-type(1){
         order: 2;
     }
-    body .projectsDescription:nth-of-type(2){
+    .projectsParent .projectsDescription:nth-of-type(2){
         order: 3;
     }
-    body .images:nth-of-type(3){
+    .projectsParent .images:nth-of-type(3){
         order: 1;
     }
-    body .pNavi:nth-of-type(4){
+    .projectsParent .pNavi:nth-of-type(4){
         order: 5;
     }
-    body .links:nth-of-type(5){
+    .projectsParent .links:nth-of-type(5){
         order: 4;
     }
+    
 
     .projectsHeader{
 
@@ -182,7 +268,7 @@ and (orientation: landscape) {
            font-size: 15px;
            margin-left: 350px;
            margin-right: 100px;
-           margin-top: 10px;       
+           margin-top: 25px;       
            
 
     }
@@ -225,11 +311,5 @@ and (orientation: landscape) {
         margin-right: -90px;
         margin-top: 0px;
     }
-
-
-
-     
-
-     
 
 }
