@@ -8,7 +8,7 @@ and (orientation: portrait) {
         opacity: 1.0;
         display: flex;
         height: 140px;
-        margin-top: 40px;
+        margin-top: -20px;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -17,14 +17,18 @@ and (orientation: portrait) {
         cursor: pointer;
     }
     .hamburger {
-        margin-top: 40px;
-        margin-left: 660px;
+        margin-top: 55px;
+        width: 500px;
     }
     .header{
         font-size: 25px;
-        margin-top: 35px;
-        margin-left: 20px;
+        margin-top: 55px;
+        width: 1000px;
         float: left;
+    }
+    .header h1{
+        width: 500px;
+        margin-left: 20px;
     }
     .bar1, .bar2, .bar3 {
         width: 70px;
@@ -43,28 +47,38 @@ and (orientation: portrait) {
     .change .bar3 {
         transform: rotate(45deg) translate(-15px, -15px) ;
     }
+    .profilePic{
+        width: 400px;
+        height: 400px;
+        margin-top: 100px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .profilePic img{
+        border-style: solid;
+        border-radius: 50%;
+    }
     .menuPhone{
-
-        opacity: 1.0;
-        width: 250px;
+        width: 200px;
+        height: 200px;
         float: right;
         text-align: right;
-        margin-right: 10px
-        
+        margin-right: 10px   
     }
     .menuPhone li{
         list-style: none;
         font-size: 35px;
+        margin-right: 15px;
         margin-top: 10px;
         margin-bottom: 10px;
-        margin-left: 60px;
+        margin-left: 0px;
     }
     .menuPhone a{
         text-decoration: none;
     }
     .bio{
         height: 600px;
-        margin-top: 250px;
+        margin-top: 90px;
         margin-right: 45px;
         margin-left: 45px;
     }
@@ -73,7 +87,7 @@ and (orientation: portrait) {
         text-align: center;
         margin-top: 30px;
         margin-bottom: 30px;
-        font-size: 40px;
+        font-size: 50px;
     }
     .bio li{
         list-style: none;
@@ -82,23 +96,18 @@ and (orientation: portrait) {
         margin-bottom: 7px;
         margin-left: 20px;
         margin-right: 20px;
-        font-size: 30px;
+        font-size: 35px;
     }
     /*******************************projects.html************************/
-    .projectsHeader h1{
-        text-align: center;
-        margin-top: 15px;
-        font-size: 40px;
-    }
+
     .projectsDescription h2{
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 35px;
+        margin-right: 35px;
         margin-top: 30px;
-        font-size: 13px;
+        font-size: 15px;
     }
     .projectsDescription p{
-        margin-left: 100px;
-        margin-right: 100px;
+        margin-left: 220px;
         margin-top: 15px;
         font-size: 13px;
     }
@@ -109,7 +118,7 @@ and (orientation: portrait) {
     .images{
         
         width: 517px;
-        height: 996px;
+        height: 900px;
         margin-left: 225px;
         border-style: solid;
         border-radius: 10px;
@@ -141,7 +150,25 @@ and (orientation: portrait) {
         margin-right: 100px;
         font-size: 30px;
     }
-    
+    .limbo{
+        width: 400px;
+        height: 400px;
+        margin-top: 275px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pic{
+        
+        border-radius: 50%;
+    }
+    .limbo li{
+        margin-left: 125px;
+        margin-top: 30px;
+        text-align: left;
+        list-style: none;
+        font-size: 40px;
+    }
+  
     /*******************************projects.html************************/
 }
 /*smart phone landscape*/
@@ -149,35 +176,41 @@ and (orientation: portrait) {
 and (min-device-width: 320px) 
 and (max-device-width: 823px) 
 and (orientation: landscape) {
-
-    script{
-        display: none;
+    .projectsParent{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top:65px;
     }
-    title{
-        display: none;
+    .projectsParent .projectsDescription:nth-of-type(1){
+        order: 2;
     }
-
+    .projectsParent .images:nth-of-type(2){
+        order: 1;
+    }
+    .projectsParent .pNavi:nth-of-type(3){
+        order: 3;
+    }
+    .projectsParent .links:nth-of-type(4){
+        order: 4;
+    }  
+    .header{
+        width: 900px;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 15px;
+        float: left;
+    }
     .naviPhone{
         opacity: 1.0;
         display: flex;
         height: 0px;
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
+        margin-top: 0px;
+        margin-left: 0px;
+        margin-right: 0px;
     }
     .hamburger{
         flex: 1;
         cursor: pointer;
-    }
-    .hamburger {
-        margin-top: 10px;
-        margin-left: 735px;
-    }
-    .header{
-        font-size: 20px;
-        margin-top: 10px;
-        margin-left: 4px;
-        float: left;
     }
     .bar1, .bar2, .bar3 {
         width: 50px;
@@ -197,119 +230,107 @@ and (orientation: landscape) {
         transform: rotate(45deg) translate(-10px, -10px) ;
     }
     .menuPhone{
-
-        opacity: 1.0;
-        width: 250px;
-        float: right;
-        text-align: right;
-        margin-top: 70px;
-        margin-right: 15px
         
+        margin-left: 0px;
+        margin-right: 20px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+        font-size: 25px;
     }
     .menuPhone li{
         list-style: none;
-        font-size: 20px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 60px;
+        text-align: right;
     }
-    .menuPhone a{
-        text-decoration: none;
+    .profilePic{
+        width: 40px;
+        margin-right: 0px;
+        margin-left: 15px;
+        margin-top: 60px;
+        margin-bottom: 0px;
+    }
+    .profilePic img{
+        border-radius: 50%;
+    }
+    .projectsDescription{
+        width: 485px;
+        height: 200px;
+        font-size: 20px;
+    }
+    .projectsDescription h2{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .projectsDescription p{
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .images{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+    .pNavi{
+        display: flex;
+        margin-left: -280px;
+        margin-right: 0px;
+        margin-top: 355px;
+        margin-bottom: 0px;
+        font-size: 80px;  
+    }
+    .left{
+        margin-right: 115px;
+    }
+    .links{
+        display: flex;
+        margin-left: -555px;
+        margin-right: 0px;
+        margin-top: 450px;
+        margin-bottom: 0px;
+        font-size: 20px;   
+    }
+    .repoLink{
+        margin-right: 20px;
     }
     .bio{
-        height: 600px;
-        margin-top: 90px;
-        margin-right: 45px;
-        margin-left: 15px;
+        margin-left: 0px;
+        margin-right: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
     }
     .bio h2{
-
         text-align: left;
-        margin-top: 20px;
-        margin-bottom: 20px;
-        font-size: 25px;
+        margin-left: 15px;
+        margin-bottom: 10px;
+    }
+    .bio ul{
+        margin-bottom: 10px;
     }
     .bio li{
         list-style: none;
         text-align: left;
-        margin-top: 7px;
-        margin-bottom: 7px;
-        margin-left: 0px;
-        margin-right: 20px;
-        font-size: 20px;
+        margin-left: 15px;
+        margin-right: 15px;
+        
     }
-
-    
-    .projectsParent{
-        display: grid;
-        grid-template-columns: repeat(5, 1fr);
-    }
-    
-    .projectsParent .projectsHeader:nth-of-type(1){
-        order: 2;
-    }
-    .projectsParent .projectsDescription:nth-of-type(2){
-        order: 3;
-    }
-    .projectsParent .images:nth-of-type(3){
-        order: 1;
-    }
-    .projectsParent .pNavi:nth-of-type(4){
-        order: 5;
-    }
-    .projectsParent .links:nth-of-type(5){
-        order: 4;
-    }
-    
-
-    .projectsHeader{
-
-        position: absolute;
-           font-size: 15px;
-           margin-left: 350px;
-           margin-right: 100px;
-           margin-top: 25px;       
-           
-
-    }
-    .projectsDescription{
-        width: 250px;
-        margin-right: 350px;
-        margin-left: 35px;
-        margin-top: 90px;
-        margin-bottom: 0px;
-        font-size: 13px;
-    }
-  
-    .pNavi{
+    .limbo{
         display: flex;
-        margin-left: -50px;
-        margin-right: 60px;
-        margin-top: 440px;
-        margin-bottom: 0px;
-        font-size: 70px;
-    }
-    .left{
-        margin-right: 60px;
-        margin-left: -70px;
-    }
-    .links{
-        display: flex;
-        margin-left: -360px;
+        margin-left: 300px;
         margin-right: 0px;
-        margin-top: 495px;
+        margin-top: 0px;
         margin-bottom: 0px;
-        font-size: 20px;
     }
-    .repoLink{
-        margin-left: -235px;
-        margin-right: 50px;
-        margin-top: 0px;
+    .limbo li{
+        list-style: none;
+        margin-left: 55px;
+        margin-right: 0px;
+        margin-top: 5px;
+        margin-bottom: 0px;
+        font-size: 25px;
     }
-    .liveLink{
-        margin-left: 0px;
-        margin-right: -90px;
-        margin-top: 0px;
+    .limbo img{
+        border-radius: 50%;
     }
-
 }

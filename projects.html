@@ -6,6 +6,8 @@
     <title>My Projects</title>
     <meta name="Projects" content="My Projects">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="phone.css">
     <link rel="stylesheet" href="tablet.css">
@@ -15,14 +17,39 @@
 </head>
 
 <body>
-    <div class="projectsParent">
+    <div class="naviPhone">
 
-
-        <div class="projectsHeader">
+        <div class="header">
             <h1>
-                empty heading
+                Ben Kile
             </h1>
         </div>
+        <div class="hamburger" onclick="hamburgerClick(this)">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+    </div>
+    <div class="menuPhone">
+        <ul>
+            <li>
+                <a href="index.html">Bio</a>
+            </li>
+            <li>
+                <a href="https://github.com/benjaminfkile"target="_blank">Github</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/benjamin-kile-901092182/"target="_blank">LinkedIn</a>
+            </li>
+            <li>
+                <A HREF="mailto:benjaminfkile@gmail.com" target="_blank">Email Me</A>
+            </li>
+        </ul>
+
+    </div>
+    <div class="projectsParent">
+
 
         <div class="projectsDescription">
             <h2>
@@ -48,13 +75,52 @@
             </div>
         </div>
     </div>
+    <div class=limbo>
+        <img class="pic" src="./indexRes/myPic.jpg" alt="me">
+        <ul>
+            <li>
+                <i class="devicon-html5-plain-wordmark"></i>
+                <span>
+                    HTML
+                </span>
+            </li>
+            <li>
+                <i class="devicon-css3-plain-wordmark"></i>
+                <span>
+                    CSS
+                </span>
+            </li>
+            <li>
+                <i class="devicon-java-plain-wordmark"></i>
+                <span>
+                    Java
+                </span>
+            </li>
+            <li>
+                <i class="devicon-javascript-plain"></i>
+                <span>
+                    Javascript
+                </span>
+            </li>
+            <li>
+                <i class="devicon-jquery-plain-wordmark"></i>
+                <span>
+                    jQuery
+                </span>
+            </li>
+        </ul>
+    </div>
     <script>
 
         var projectIndex = 0;
         var imgIndex = -1;
-        carousel();
-        loadText();
-        setInterval(carousel, 3000);
+        $(document).ready(function () {
+            $(".limbo").hide();
+            carousel();
+            loadText();
+            setInterval(carousel, 3000);
+        });
+
 
         function carousel() {
             imgIndex++;
@@ -65,9 +131,6 @@
             }
         }
         function loadImage(args) {
-            /*
-            $(".images").empty();
-            */
             $(".images").html(
                 "<img src="
                 + "\""
@@ -80,12 +143,10 @@
             if (projectIndex === 0) {
                 $(".left").css("color", "gray");
                 $(".right").css("color", "silver");
-
             }
             if (projectIndex === projectsArray.length - 1) {
                 $(".left").css("color", "silver");
                 $(".right").css("color", "gray");
-
             }
             $("h1").html(projectsArray[projectIndex].name);
             $("h2").html(projectsArray[projectIndex].description);
@@ -112,5 +173,35 @@
                 carousel();
             }
         }
+    </script>
+    <script>
+        function hamburgerClick(args) {
+            args.classList.toggle("change");
+            menuChecked++;
+            if (menuChecked % 2 !== 0) {
+                console.log("checked");
+                menuExpand();
+                $(".header h1").html("Ben Kile");
+                $(".projectsParent").hide();
+                $(".limbo").fadeIn();
+            } else {
+                console.log("unchecked");
+                menuCollapse();
+                $(".header h1").html(projectsArray[projectIndex].name);
+                $(".projectsParent").show();
+                $(".limbo").hide();
+            }
+        }
+        function menuExpand() {
+            $(".menuPhone").slideDown();
+        }
+        function menuCollapse() {
+            console.log("collapse");
+            $(".menuPhone").slideUp();
+        }
+        $(document).ready(function () {
+            $(".menuPhone").hide();
+        });
+        var menuChecked = 0;
     </script>
 </body>

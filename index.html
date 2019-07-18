@@ -6,12 +6,13 @@
     <title>Ben Kile</title>
     <meta name="Ben Kile" content="Ben Kile">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="phone.css">
     <link rel="stylesheet" href="tablet.css">
     <link rel="stylesheet" href="large.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
-
 </head>
 
 <body>
@@ -33,19 +34,21 @@
     <div class="menuPhone">
         <ul>
             <li>
-                <a href="projects.html">Portfolio</a>
+                <a href="projects.html">Projects</a>
             </li>
             <li>
-                <a href="https://github.com/benjaminfkile">Github</a>
+                <a href="https://github.com/benjaminfkile" target="_blank">Github</a>
             </li>
             <li>
-                <a href="https://www.linkedin.com/in/benjamin-kile-901092182/">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/benjamin-kile-901092182/" target="_blank">LinkedIn</a>
             </li>
             <li>
-                <A HREF="mailto:benjaminfkile@gmail.com">Email Me</A>
+                <A HREF="mailto:benjaminfkile@gmail.com" target="_blank">Email Me</A>
             </li>
         </ul>
-
+    </div>
+    <div class="profilePic">
+        <img src="./indexRes/myPic.jpg" alt="me">
     </div>
     <div class="bio">
         <h2>
@@ -64,24 +67,37 @@
         </h2>
         <ul>
             <li>
-                HTML
+                <i class="devicon-html5-plain-wordmark"></i>
+                <span>
+                    HTML
+                </span>
             </li>
             <li>
-                CSS
+                <i class="devicon-css3-plain-wordmark"></i>
+                <span>
+                    CSS
+                </span>
             </li>
             <li>
-                Java
+                <i class="devicon-java-plain-wordmark"></i>
+                <span>
+                    Java
+                </span>
             </li>
             <li>
-                Javascript
+                <i class="devicon-javascript-plain"></i>
+                <span>
+                    Javascript
+                </span>
             </li>
             <li>
-                jQuery
-            </li>
-            <li>
-                OpenGL
+                <i class="devicon-jquery-plain-wordmark"></i>
+                <span>
+                    jQuery
+                </span>
             </li>
         </ul>
+
     </div>
 
     <script>
@@ -91,11 +107,9 @@
             if (menuChecked % 2 !== 0) {
                 console.log("checked");
                 menuExpand();
-                $(".bio").fadeOut();
             } else {
                 console.log("unchecked");
                 menuCollapse();
-                $(".bio").fadeIn();
             }
         }
         function menuExpand() {
