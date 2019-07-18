@@ -55,7 +55,6 @@ and (orientation: portrait) {
         margin-right: auto;
     }
     .profilePic img{
-        border-style: solid;
         border-radius: 50%;
     }
     .menuPhone{
@@ -67,7 +66,7 @@ and (orientation: portrait) {
     }
     .menuPhone li{
         list-style: none;
-        font-size: 35px;
+        font-size: 45px;
         margin-right: 15px;
         margin-top: 10px;
         margin-bottom: 10px;
@@ -91,7 +90,7 @@ and (orientation: portrait) {
     }
     .bio li{
         list-style: none;
-        text-align: center;
+        text-align: left;
         margin-top: 7px;
         margin-bottom: 7px;
         margin-left: 20px;
@@ -235,17 +234,21 @@ and (orientation: landscape) {
         margin-right: 20px;
         margin-top: 60px;
         margin-bottom: 0px;
-        font-size: 25px;
+        font-size: 20px;
     }
     .menuPhone li{
         list-style: none;
         text-align: right;
     }
+    .menuPhone a{
+        text-decoration: none;
+        font-size: 25px;
+    }
     .profilePic{
         width: 40px;
         margin-right: 0px;
-        margin-left: 15px;
-        margin-top: 60px;
+        margin-left: 420px;
+        margin-top: 10px;
         margin-bottom: 0px;
     }
     .profilePic img{
@@ -313,6 +316,7 @@ and (orientation: landscape) {
         text-align: left;
         margin-left: 15px;
         margin-right: 15px;
+        font-size: 13px;
         
     }
     .limbo{
