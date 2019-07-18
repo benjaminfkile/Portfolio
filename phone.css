@@ -329,7 +329,7 @@ and (orientation: landscape) {
         display: flex;
         margin-left: 300px;
         margin-right: 0px;
-        margin-top: 0px;
+        margin-top: 125px;
         margin-bottom: 0px;
     }
     .limbo li{
