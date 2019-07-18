@@ -17,7 +17,7 @@ var projectsArray = [
     },
     {
         name: "Keno Simulator:",
-        description: "Keno Simulator lets you simulate up to 2 billion games of keno in a single session.  You can chose to have numbers automatically guessed for you based on the hottest numbers or choose your own. The top of the program shows you which numbers are hottest and keeps track of the scores 1-10.",
+        description: "Keno Simulator lets you simulate up to 2 billion games of keno in a single session.  You can chose to have numbers automatically guessed for you based on the hottest numbers or choose your own.",
         technology: "Java, Swing(Java)",
         repoLink: "<a href=\https:\/\/github.com\/benjaminfkile\/spaghetti>Github<\/a>",
         liveLink: "<a href=https:\/\/www.dropbox.com\/s\/p8d4gzjytwvvob9\/KenoSimulator.jar?dl=0>Download<\/a>",
