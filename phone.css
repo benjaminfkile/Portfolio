@@ -3,6 +3,9 @@
 and (min-device-width: 320px) 
 and (max-device-width: 812px) 
 and (orientation: portrait) {
+    .naviDesktop{
+        display: none;
+    }
     /*******************************index.html************************/
     .naviPhone{
         opacity: 1.0;
@@ -175,6 +178,9 @@ and (orientation: portrait) {
 and (min-device-width: 320px) 
 and (max-device-width: 823px) 
 and (orientation: landscape) {
+    .naviDesktop{
+        display: none;
+    }
     .projectsParent{
         display: grid;
         grid-template-columns: repeat(4, 1fr);

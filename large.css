@@ -3,119 +3,80 @@
 and (min-device-width : 824px) 
 and (max-device-width : 1920px) {
     /*******************************index.html************************/
-    .naviPhone{
-        opacity: 1.0;
-        display: flex;
-        height: 50px;
-        margin-top: 10px;
-        margin-left: 10px;
-        margin-right: 10px;
-    }
-    .hamburger{
-        flex: 1;
-        cursor: pointer;
-    }
-    .hamburger {
-        margin-top: 40px;
-        margin-left: 80%;
 
-
-    }
     .header{
-        font-size: 25px;
-        margin-top: 35px;
-        margin-left: 20px;
-        float: left;
+        margin-left: 30px;
+        margin-top: 20px;
+        font-size: 20px;
     }
-    .bar1, .bar2, .bar3 {
-        width: 70px;
-        height: 5px;
-        background-color: white;
-        margin: 14px 0;
-        transition: 0.4s;
-    }
-    .change .bar1 {
-        transform: rotate(-45deg) translate(-10px, 10px) ;
-    }
-    .change .bar2 {
-        opacity: 0;
-    }
-      
-    .change .bar3 {
-        transform: rotate(45deg) translate(-15px, -15px) ;
-    }
-    .menuPhone{
-
-        opacity: 1.0;
-        width: 250px;
+    .naviDesktop ul{
+        display: flex;
         float: right;
-        text-align: right;
-        margin-top: 40px;
-        margin-right: 10px
-        
     }
-    .menuPhone li{
+    .naviDesktop li{
         list-style: none;
-        font-size: 35px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        margin-left: 60px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: -50px;
+        font-size: 20px;
     }
-    .menuPhone a{
-        text-decoration: none;
+    .profilePic{
+        width: 250px;
+        height: 250px;;
+        margin-left: 20px;
+        margin-top: 70px;
     }
+    .profilePic img{
+        border-radius: 50%;
+    }
+
     .bio{
-        height: 600px;
-        margin-top: 250px;
-        margin-right: 45px;
-        margin-left: 45px;
+        margin-left: 30px;
+        margin-right: 500px;
+        margin-top: 70px;
+        margin-bottom: 60px;
+        font-size: 20px;
     }
     .bio h2{
-
-        text-align: center;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        font-size: 40px;
+        margin-top: 10px;
     }
     .bio li{
         list-style: none;
-        text-align: center;
-        margin-top: 7px;
-        margin-bottom: 7px;
-        margin-left: 20px;
-        margin-right: 20px;
-        font-size: 30px;
+        margin-top: 15px;
     }
+
+     /*******************************index.html************************/
     /*******************************projects.html************************/
-    .projectsHeader h1{
-        text-align: center;
-        margin-top: 50px;
-        font-size: 40px;
+
+    .projectsParent{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        margin-top:65px;
     }
-    .projectsDescription h2{
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 30px;
-        font-size: 35px;
+    .projectsParent .projectsDescription:nth-of-type(1){
+        order: 2;
     }
-    .projectsDescription p{
-        margin-left: 100px;
-        margin-right: 100px;
-        margin-top: 30px;
-        font-size: 30px;
+    .projectsParent .images:nth-of-type(2){
+        order: 1;
     }
+    .projectsParent .pNavi:nth-of-type(3){
+        order: 3;
+    }
+    .projectsParent .links:nth-of-type(4){
+        order: 4;
+    } 
     img{
         width: 100%;
         height: 100%;
     }
     .images{
         
-        width: 517px;
-        height: 996px;
-        margin-left: 225px;
+        width: 444px;
+        height: 770px;
+        margin-left: 25px;
         border-style: solid;
         border-radius: 10px;
-        margin-top: 50px; 
+        margin-top: -55px; 
         display: block;
     }
     .pNavi{
@@ -123,26 +84,55 @@ and (max-device-width : 1920px) {
         border: none;
         font-size: 105px;
         margin-top:  0px;
-        margin-left: 305px;
+        margin-left: 300px;
     }
     .left{
+        cursor: pointer;
         margin-right: 260px;
     }
+    .right{
+        cursor: pointer;
+    }
+    .limbo{
+        width: 400px;
+        height: 400px;
+        margin-top: 145px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .pic{
+        
+        border-radius: 50%;
+    }
+    .projectsDescription{
+        width: 500px;
+    }
+    .projectsDescription h2{
+        margin-top: -55px;
+        margin-left: 25px;
+        margin-right: 20px;
+        font-size: 35px;
+    }
+    .projectsDescription p{
+        margin-top: 45px;
+        margin-left: 25px;
+        margin-right: 20px;
+        font-size: 35px;
+    }
+    .pNavi{
+        margin-top: 550px;
+        margin-left: -475px;
+        margin-right: 0px;
+        font-size: 80px;
+    }
     .links{
-        text-decoration: none;
-        display: flex;
-        margin-top: 25px;
+      text-align: right;
+      margin-right: 30px;
+      margin-top: 690px;
     }
-    .repoLink a{
-        margin-left: 100px;
-        margin-right: 100px;
-        font-size: 30px;
+    .repoLink{
+        margin-bottom: 10px;
     }
-    .liveLink a{
-        margin-left: 450px;
-        margin-right: 100px;
-        font-size: 30px;
-    }
-    
-    /*******************************projects.html************************/
+
+
 }
