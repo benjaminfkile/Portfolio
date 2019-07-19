@@ -165,7 +165,7 @@
         opacity: 1.0;
         display: flex;
         height: 140px;
-        margin-top: -20px;
+        margin-top: 10px;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -306,11 +306,7 @@
         margin-left: 450px;
         margin-right: 100px;
         font-size: 20px;
-    }
-    .pic{
-        
-        border-radius: 50%;
-    }      
+    }     
     /*******************************projects.html************************/
     
     
