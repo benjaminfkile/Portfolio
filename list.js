@@ -4,7 +4,7 @@ var projectsArray = [
         description: "Space Quiz is an interactive web app that quizzes you on what you know about space. Built in Javascript there is a list of 27 questions shuffled at the start of each round.  You will be asked 8 questions and given your score at the end.",
         technology: "HTML, CSS, Javascript, jQuery",
         repoLink: "<a href=\"https:\/\/github.com\/benjaminfkile\/SpaceQuiz\">Github<\/a>",
-        liveLink: "<a href=\"https:\/\/benjaminfkile.github.io\/SpaceQuiz\/\">Live Page<\/a>",
+        liveLink: "<a href=\"https:\/\/benjaminfkile.github.io\/SpaceQuiz\/\">Live<\/a>",
         images:
             [
                 "./projectsRes/spaceQuiz/sQ1.PNG",

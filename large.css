@@ -1,9 +1,8 @@
 /* large Screens*/
 @media only screen 
-and (min-device-width : 824px) 
+and (min-device-width : 1024px) 
 and (max-device-width : 1920px) {
     /*******************************index.html************************/
-
     .header{
         margin-left: 30px;
         margin-top: 20px;
@@ -54,16 +53,16 @@ and (max-device-width : 1920px) {
         margin-top:65px;
     }
     .projectsParent .projectsDescription:nth-of-type(1){
-        order: 2;
+        order: 3;
     }
     .projectsParent .images:nth-of-type(2){
         order: 1;
     }
     .projectsParent .pNavi:nth-of-type(3){
-        order: 3;
+        order: 4;
     }
     .projectsParent .links:nth-of-type(4){
-        order: 4;
+        order: 2;
     } 
     img{
         width: 100%;
@@ -82,57 +81,54 @@ and (max-device-width : 1920px) {
     .pNavi{
         display: flex;
         border: none;
-        font-size: 105px;
-        margin-top:  0px;
-        margin-left: 300px;
+        width: 100px;
+        margin-top:  550px;
+        font-size: 105px; 
     }
     .left{
         cursor: pointer;
-        margin-right: 260px;
+        float: left;
+        margin-left: 35px;
+        margin-right: 35px;
+        
     }
     .right{
         cursor: pointer;
-    }
-    .limbo{
-        width: 400px;
-        height: 400px;
-        margin-top: 145px;
-        margin-left: auto;
-        margin-right: auto;
     }
     .pic{
         
         border-radius: 50%;
     }
     .projectsDescription{
-        width: 500px;
+        width: 550px;
+        margin-left: -100px;;
+        margin-top: 115px;
     }
     .projectsDescription h2{
-        margin-top: -55px;
-        margin-left: 25px;
-        margin-right: 20px;
-        font-size: 35px;
+        
+        margin-left: 10px;
+        margin-right: 10px;
+        font-size: 25px;
     }
     .projectsDescription p{
         margin-top: 45px;
         margin-left: 25px;
         margin-right: 20px;
-        font-size: 35px;
-    }
-    .pNavi{
-        margin-top: 550px;
-        margin-left: -475px;
-        margin-right: 0px;
-        font-size: 80px;
+        font-size: 25px;
     }
     .links{
-      text-align: right;
-      margin-right: 30px;
-      margin-top: 690px;
+    width: 100px;
+    margin-top: 580px;
     }
     .repoLink{
-        margin-bottom: 10px;
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
     }
-
-
+    .liveLink{
+    text-align: center;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+    }
 }

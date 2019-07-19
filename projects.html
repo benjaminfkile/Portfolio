@@ -29,43 +29,40 @@
             <div class="bar2"></div>
             <div class="bar3"></div>
         </div>
-
     </div>
     <div class="menuPhone">
-            <ul>
-                <li>
-                    <a href="index.html">Bio</a>
-                </li>
-                <li>
-                    <a href="https://github.com/benjaminfkile" target="_blank">Github</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/benjamin-kile-901092182/" target="_blank">LinkedIn</a>
-                </li>
-                <li>
-                    <A HREF="mailto:benjaminfkile@gmail.com" target="_blank">Email</A>
-                </li>
-            </ul>
-        </div>
+        <ul>
+            <li>
+                <a href="index.html">Bio</a>
+            </li>
+            <li>
+                <a href="https://github.com/benjaminfkile" target="_blank">Github</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/benjamin-kile-901092182/" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+                <A HREF="mailto:benjaminfkile@gmail.com" target="_blank">Email</A>
+            </li>
+        </ul>
+    </div>
     <div class="naviDesktop">
-            <ul>
-                <li>
-                    <a href="index.html">Bio</a>
-                </li>
-                <li>
-                    <a href="https://github.com/benjaminfkile" target="_blank">Github</a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/benjamin-kile-901092182/" target="_blank">LinkedIn</a>
-                </li>
-                <li>
-                    <A HREF="mailto:benjaminfkile@gmail.com" target="_blank">Email</A>
-                </li>
-            </ul>
-        </div>
+        <ul>
+            <li>
+                <a href="index.html">Bio</a>
+            </li>
+            <li>
+                <a href="https://github.com/benjaminfkile" target="_blank">Github</a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/benjamin-kile-901092182/" target="_blank">LinkedIn</a>
+            </li>
+            <li>
+                <A HREF="mailto:benjaminfkile@gmail.com" target="_blank">Email</A>
+            </li>
+        </ul>
+    </div>
     <div class="projectsParent">
-
-
         <div class="projectsDescription">
             <h2>
                 empty heading
@@ -90,53 +87,14 @@
             </div>
         </div>
     </div>
-    <div class=limbo>
-        <img class="pic" src="./indexRes/myPic.jpg" alt="me">
-        <ul>
-            <li>
-                <i class="devicon-html5-plain-wordmark"></i>
-                <span>
-                    HTML
-                </span>
-            </li>
-            <li>
-                <i class="devicon-css3-plain-wordmark"></i>
-                <span>
-                    CSS
-                </span>
-            </li>
-            <li>
-                <i class="devicon-java-plain-wordmark"></i>
-                <span>
-                    Java
-                </span>
-            </li>
-            <li>
-                <i class="devicon-javascript-plain"></i>
-                <span>
-                    Javascript
-                </span>
-            </li>
-            <li>
-                <i class="devicon-jquery-plain-wordmark"></i>
-                <span>
-                    jQuery
-                </span>
-            </li>
-        </ul>
-    </div>
     <script>
-
         var projectIndex = 0;
         var imgIndex = -1;
         $(document).ready(function () {
-            $(".limbo").hide();
             carousel();
             loadText();
             setInterval(carousel, 3000);
         });
-
-
         function carousel() {
             imgIndex++;
             if (imgIndex < projectsArray[projectIndex].images.length) {
@@ -188,8 +146,6 @@
                 carousel();
             }
         }
-    </script>
-    <script>
         function hamburgerClick(args) {
             args.classList.toggle("change");
             menuChecked++;
@@ -197,14 +153,10 @@
                 console.log("checked");
                 menuExpand();
                 $(".header h1").html("Ben Kile");
-                $(".projectsParent").hide();
-                $(".limbo").fadeIn();
             } else {
                 console.log("unchecked");
                 menuCollapse();
                 $(".header h1").html(projectsArray[projectIndex].name);
-                $(".projectsParent").show();
-                $(".limbo").hide();
             }
         }
         function menuExpand() {
