@@ -9,9 +9,6 @@
     <link rel="stylesheet"
         href="https://cdn.rawgit.com/konpa/devicon/df6431e323547add1b4cf45992913f15286456d3/devicon.min.css">
     <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="phone.css">
-    <link rel="stylesheet" href="tablet.css">
-    <link rel="stylesheet" href="large.css">
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="list.js"></script>
 </head>
@@ -114,12 +111,12 @@
         }
         function loadText() {
             if (projectIndex === 0) {
-                $(".left").css("color", "gray");
+                $(".left").css("color", "black");
                 $(".right").css("color", "silver");
             }
             if (projectIndex === projectsArray.length - 1) {
                 $(".left").css("color", "silver");
-                $(".right").css("color", "gray");
+                $(".right").css("color", "black");
             }
             $("h1").html(projectsArray[projectIndex].name);
             $("h2").html(projectsArray[projectIndex].description);
@@ -164,7 +161,7 @@
         }
         function menuCollapse() {
             console.log("collapse");
-            $(".menuPhone").hide();
+            $(".menuPhone").slideUp();
         }
         $(document).ready(function () {
             $(".menuPhone").hide();
